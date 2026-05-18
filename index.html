@@ -119,6 +119,15 @@ main,header,footer{position:relative;z-index:1}
 .why-title{font-family:'Playfair Display',serif;font-size:20px;margin-bottom:10px}
 .why-desc{font-size:13.5px;color:var(--ink);line-height:1.75;font-weight: bolder;}
 #demo{background:var(--ink)}
+
+/* ── Divider ── */
+.div-ornament{display:flex;align-items:center;justify-content:center;gap:18px;margin-bottom:40px}
+.div-line{flex:1;max-width:80px;height:1px;background:linear-gradient(90deg,transparent,var(--gold-b),transparent)}
+.div-cross{position:relative;width:12px;height:12px}
+.div-cross::before,.div-cross::after{content:'';position:absolute;background:var(--gold);border-radius:1px}
+.div-cross::before{width:1px;height:12px;left:50%;transform:translateX(-50%)}
+.div-cross::after{width:12px;height:1px;top:50%;transform:translateY(-50%)}
+
 .chat-demo{display:grid;grid-template-columns:1.15fr 1fr;gap:22px;text-align:left}
 .chat-widget,.pipeline-panel{background:var(--ink2);border:1px solid rgba(201,168,76,.12);border-radius:var(--r3);overflow:hidden;display:flex;flex-direction:column;min-height:520px}
 .chat-header{padding:14px 18px;background:var(--gold-a);border-bottom:1px solid var(--gold-b);display:flex;align-items:center;gap:12px}
@@ -207,7 +216,107 @@ main,header,footer{position:relative;z-index:1}
 .booking-success .success-icon{font-size:42px;margin-bottom:14px}
 .booking-success .success-title{font-family:'Playfair Display',serif;font-size:24px;font-weight:700;color:var(--ink);margin-bottom:8px}
 .booking-success .success-text{font-size:14px;color:var(--muted);line-height:1.75}
+/* Demo Section */
+.demo-showcase{border:1px solid rgba(201,168,76,.12);border-radius:var(--r3);overflow:hidden;background:var(--ink2)}
+.demo-tab-bar{display:flex;gap:0;border-bottom:1px solid rgba(201,168,76,.1);overflow-x:auto;-webkit-overflow-scrolling:touch}
+.demo-tab{flex:1;min-width:140px;padding:14px 16px;font-size:13px;font-weight:600;color:rgba(255,255,255,.45);background:none;border:none;cursor:pointer;transition:all .2s;border-bottom:2px solid transparent;font-family:'DM Sans',sans-serif;white-space:nowrap}
+.demo-tab:hover{color:rgba(255,255,255,.7)}
+.demo-tab.active{color:var(--gold);border-bottom-color:var(--gold);background:var(--gold-c)}
+.demo-panel{display:none;padding:32px}
+.demo-panel.active{display:block}
+/* Phone mockup */
+.demo-phone-wrap{display:grid;grid-template-columns:340px 1fr;gap:32px;align-items:start}
+.demo-phone{background:#0b1929;border-radius:24px;border:1px solid rgba(201,168,76,.15);overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.4)}
+.demo-phone-header{background:#075e54;padding:14px 16px;display:flex;align-items:center;gap:12px}
+.demo-phone-av{width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,.15);display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0}
+.demo-phone-name{font-size:14px;font-weight:700;color:#fff}
+.demo-phone-status{font-size:11px;color:rgba(255,255,255,.65)}
+.demo-phone-msgs{padding:16px;display:flex;flex-direction:column;gap:10px;min-height:240px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100'%3E%3Crect width='100' height='100' fill='%230b1929'/%3E%3C/svg%3E")}
+.demo-msg-in,.demo-msg-out{display:flex;flex-direction:column;gap:3px}
+.demo-msg-out{align-items:flex-end}
+.demo-bubble-in{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.06);border-radius:12px 12px 12px 2px;padding:10px 13px;font-size:13px;color:#e8e8e8;line-height:1.5;max-width:85%}
+.demo-bubble-out{background:#056950;border-radius:12px 12px 2px 12px;padding:10px 13px;font-size:13px;color:#fff;line-height:1.5;max-width:85%}
+.demo-time{font-size:10px;color:rgba(255,255,255,.3);margin-top:2px;padding:0 4px}
+.demo-typing-indicator{display:flex;gap:4px;padding:10px 13px;background:rgba(255,255,255,.06);border-radius:12px;width:fit-content;margin-top:4px}
+.demo-typing-indicator span{width:6px;height:6px;border-radius:50%;background:rgba(255,255,255,.4);animation:tb 1.2s infinite}
+.demo-typing-indicator span:nth-child(2){animation-delay:.2s}
+.demo-typing-indicator span:nth-child(3){animation-delay:.4s}
+.demo-phone-input{padding:12px 16px;background:#111f2e;display:flex;align-items:center;gap:10px;border-top:1px solid rgba(255,255,255,.06)}
+.demo-input-placeholder{flex:1;color:rgba(255,255,255,.3);font-size:13px;font-family:'DM Sans',sans-serif}
+.demo-send-btn{width:36px;height:36px;border-radius:50%;background:#056950;display:flex;align-items:center;justify-content:center;color:#fff;font-size:14px;cursor:pointer}
+.demo-side-info{display:flex;flex-direction:column;gap:14px;padding-top:8px}
+.demo-info-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:var(--r2);padding:16px 18px}
+.demo-info-label{font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:6px}
+.demo-info-value{font-family:'Playfair Display',serif;font-size:22px;font-weight:700}
+/* Dashboard */
+.demo-dashboard{border-radius:var(--r2);overflow:hidden}
+.demo-db-header{display:flex;align-items:center;justify-content:space-between;padding:16px 20px;background:rgba(255,255,255,.04);border-bottom:1px solid rgba(255,255,255,.06)}
+.demo-db-title{font-size:14px;font-weight:700;color:var(--paper)}
+.demo-db-live{font-size:11px;color:#4ade80;font-weight:700;animation:pulse 2s infinite}
+.demo-db-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,.06);border-bottom:1px solid rgba(255,255,255,.06)}
+.demo-db-stat{background:var(--ink2);padding:20px 16px;text-align:center}
+.demo-db-num{font-family:'Playfair Display',serif;font-size:32px;font-weight:700}
+.demo-db-lbl{font-size:11px;color:rgba(255,255,255,.4);margin-top:4px;font-weight:600;text-transform:uppercase;letter-spacing:.06em}
+.demo-db-rows{display:flex;flex-direction:column;gap:1px;background:rgba(255,255,255,.04)}
+.demo-db-row{background:var(--ink2);padding:14px 20px;display:flex;align-items:center;gap:12px;font-size:13px}
+.demo-db-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+.demo-db-lname{flex:1;font-weight:600;color:var(--paper)}
+.demo-intent-badge{font-size:10px;font-weight:700;padding:3px 10px;border-radius:var(--rp)}
+.demo-db-time{font-size:11px;color:rgba(255,255,255,.3);flex-shrink:0}
+/* Booking Flow */
+.demo-flow{background:rgba(255,255,255,.03);border-radius:var(--r2);padding:28px}
+.demo-flow-title{font-size:14px;font-weight:700;color:var(--paper);margin-bottom:28px;letter-spacing:.05em;text-transform:uppercase}
+.demo-flow-steps{display:flex;align-items:center;gap:0;flex-wrap:wrap;gap:8px;margin-bottom:24px}
+.demo-flow-step{flex:1;min-width:120px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:var(--r2);padding:18px 14px;text-align:center;font-size:12.5px;color:rgba(255,255,255,.7);line-height:1.5;transition:all .3s}
+.demo-flow-step.active{border-color:var(--teal-b);background:var(--teal-a)}
+.demo-flow-step.active .demo-flow-num{background:var(--teal);color:#fff}
+.demo-flow-num{width:28px;height:28px;border-radius:50%;background:rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;margin:0 auto 10px;color:rgba(255,255,255,.5)}
+.demo-flow-arrow{font-size:20px;color:rgba(255,255,255,.2);flex-shrink:0}
+.demo-flow-note{padding:14px 18px;background:rgba(37,211,102,.08);border:1px solid rgba(37,211,102,.2);border-radius:var(--r);font-size:13px;color:var(--wa);font-weight:600}
+/* Workflow */
+.demo-workflow{padding:8px}
+.demo-wf-title{font-size:14px;font-weight:700;color:var(--paper);margin-bottom:28px;text-transform:uppercase;letter-spacing:.05em}
+.demo-wf-nodes{display:flex;align-items:center;gap:0;margin-bottom:28px;flex-wrap:wrap;gap:12px}
+.demo-wf-node{flex:1;min-width:120px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:var(--r2);padding:20px 16px;text-align:center;font-size:12px;color:rgba(255,255,255,.65);line-height:1.5}
+.demo-wf-node.trigger{border-color:rgba(201,168,76,.3);background:var(--gold-c)}
+.demo-wf-node.ai{border-color:var(--teal-b);background:var(--teal-a)}
+.demo-wf-node.condition{border-color:rgba(139,92,246,.3);background:rgba(139,92,246,.06)}
+.demo-wf-node.action{border-color:rgba(16,185,129,.3);background:rgba(16,185,129,.06)}
+.demo-wf-node-icon{font-size:24px;margin-bottom:10px}
+.demo-wf-node-label{font-size:12.5px;font-weight:600;color:var(--paper)}
+.demo-wf-line{width:32px;height:2px;background:linear-gradient(90deg,rgba(201,168,76,.4),rgba(14,168,160,.4));flex-shrink:0}
+.demo-wf-footer{display:flex;gap:8px;flex-wrap:wrap}
+.demo-wf-badge{font-size:11px;font-weight:700;padding:5px 12px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:var(--rp);color:rgba(255,255,255,.6)}
+@media(max-width:900px){.demo-phone-wrap{grid-template-columns:1fr}.demo-db-stats{grid-template-columns:repeat(2,1fr)}.demo-flow-steps{flex-direction:column}.demo-flow-arrow{transform:rotate(90deg)}.demo-wf-nodes{flex-direction:column}.demo-wf-line{width:2px;height:24px;background:linear-gradient(180deg,rgba(201,168,76,.4),rgba(14,168,160,.4))}}
+
 footer{background:var(--ink2);border-top:1px solid rgba(201,168,76,.08);padding:48px 0 28px}
+.foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:32px;margin-bottom:36px}
+.foot-tagline{font-size:13px;color:var(--paper);line-height:1.7;max-width:300px;margin-top:14px;font-weight:bolder}
+.foot-col h4{font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--paper);margin-bottom:14px}
+.foot-col ul{list-style:none;display:flex;flex-direction:column;gap:10px;font-weight:500;color:var(--gold)}
+.foot-col a{font-size:13px;color:var(--paper);transition:color .2s}
+.foot-col a:hover{color:var(--gold)}
+.foot-bottom{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;padding-top:24px;border-top:1px solid rgba(255,255,255,.06);font-size:12px;color:var(--gold2);font-weight:bolder;font-style:italic}
+/* Industries */
+.ind-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.ind-card{background:#fff;border:1px solid rgba(11,31,58,.08);border-radius:var(--r3);padding:28px 20px;text-align:center;transition:all .3s var(--ease);box-shadow:0 4px 20px rgba(11,31,58,.05)}
+.ind-card:hover{border-color:rgba(201,168,76,.35);transform:translateY(-5px);box-shadow:0 16px 48px rgba(201,168,76,.1)}
+.ind-icon{font-size:32px;margin-bottom:12px}
+.ind-name{font-family:'Playfair Display',serif;font-size:17px;font-weight:700;color:var(--ink);margin-bottom:6px}
+.ind-desc{font-size:12px;color:var(--muted);line-height:1.6;font-weight:600}
+/* How It Works */
+.steps-grid{display:grid;grid-template-columns:1fr auto 1fr auto 1fr;gap:0;align-items:start}
+.step-card{background:var(--gold-c);border:1px solid rgba(201,168,76,.15);border-radius:var(--r3);padding:32px 28px;transition:all .3s var(--ease)}
+.step-card:hover{border-color:var(--gold-b);transform:translateY(-4px);box-shadow:0 20px 50px rgba(0,0,0,.25)}
+.step-num{font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:16px}
+.step-icon{width:52px;height:52px;border-radius:var(--r2);background:var(--teal-a);border:1px solid var(--teal-b);display:flex;align-items:center;justify-content:center;color:var(--teal);margin-bottom:18px}
+.step-title{font-family:'Playfair Display',serif;font-size:24px;font-weight:700;color:var(--paper);margin-bottom:12px}
+.step-desc{font-size:13.5px;color:rgba(255,255,255,.65);line-height:1.75;margin-bottom:18px;font-weight:500}
+.step-tag{display:inline-flex;align-items:center;padding:5px 14px;background:var(--teal-a);border:1px solid var(--teal-b);border-radius:var(--rp);font-size:11px;font-weight:700;color:var(--teal);letter-spacing:.05em}
+.step-arrow{display:flex;align-items:center;justify-content:center;font-size:28px;color:var(--gold);opacity:.5;padding:0 10px;margin-top:80px}
+@media(max-width:900px){.ind-grid{grid-template-columns:repeat(2,1fr)}.steps-grid{grid-template-columns:1fr}.step-arrow{margin-top:0;transform:rotate(90deg);padding:8px 0}}
+@media(max-width:600px){.ind-grid{grid-template-columns:repeat(2,1fr)}}
+border-top:1px solid rgba(201,168,76,.08);padding:48px 0 28px}
 .foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:32px;margin-bottom:36px}
 .foot-tagline{font-size:13px;color:var(--paper);line-height:1.7;max-width:300px;margin-top:14px;font-weight: bolder;}
 .foot-col h4{font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--paper);margin-bottom:14px;font-weight: bolder;}
@@ -238,7 +347,8 @@ html[dir="rtl"] .timeline-row{grid-template-columns:12px 1fr auto}
 </a>
 <div class="nav-links">
 <a class="nav-a" href="#services" data-t="navServices">Services</a>
-<a class="nav-a" href="#why" data-t="navWhy">Why Us</a>
+<a class="nav-a" href="#industries" data-t="navIndustries">Industries</a>
+<a class="nav-a" href="#how" data-t="navHow">How It Works</a>
 <a class="nav-a" href="#demo" data-t="navDemo">Try Demo</a>
 <a class="nav-a" href="#contact" data-t="navContact">Contact</a>
 </div>
@@ -253,7 +363,8 @@ html[dir="rtl"] .timeline-row{grid-template-columns:12px 1fr auto}
 </nav>
 <div class="mobile-menu" id="mobileMenu">
 <a href="#services" onclick="closeMobileMenu()" data-t="navServices">Services</a>
-<a href="#why" onclick="closeMobileMenu()" data-t="navWhy">Why Us</a>
+<a href="#industries" onclick="closeMobileMenu()" data-t="navIndustries">Industries</a>
+<a href="#how" onclick="closeMobileMenu()" data-t="navHow">How It Works</a>
 <a href="#demo" onclick="closeMobileMenu()" data-t="navDemo">Try Demo</a>
 <a href="#contact" onclick="closeMobileMenu()" data-t="navContact">Contact</a>
 <a href="#contact" onclick="closeMobileMenu()" data-t="navCta">Book Free Demo</a>
@@ -266,11 +377,12 @@ html[dir="rtl"] .timeline-row{grid-template-columns:12px 1fr auto}
 <div class="wrap">
 <div class="hero-inner fu">
 <div class="label label-teal"><span class="label-dot"></span><span data-t="eyebrow">AI Automation · Engineered in Kuwait</span></div>
-<h1 class="hero-h1" data-t="h1">AI Automation, <span class="accent">Engineered</span> for Growth.</h1>
-<p class="hero-sub" data-t="sub">We build intelligent systems that capture, qualify, and convert leads — so your team can focus on closing.</p>
-<p class="urgency" data-t="urgency">⚡ Clinics are losing patients daily due to slow replies — we fix that in 48 hours.</p>
+<h1 class="hero-h1" data-t="h1">Helping Kuwait &amp; GCC Businesses <span class="accent">Grow</span> With AI Automation.</h1>
+<p class="hero-sub" data-t="sub">AI systems for WhatsApp, lead generation, appointment booking, follow-ups, and workflow automation.</p>
+<p class="urgency" data-t="urgency">⚡ Your business is losing leads every day — slow replies, missed bookings, manual follow-up. We fix that in 48 hours.</p>
 <div class="hero-ctas">
 <a href="#contact" class="btn btn-gold btn-lg"><span data-t="heroCta1">Automate My Business</span></a>
+<a href="https://wa.me/96599893300" target="_blank" rel="noopener" class="btn btn-wa btn-lg"><svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/></svg><span data-t="heroCta2">WhatsApp Us</span></a>
 </div>
 </div>
 </div>
@@ -285,8 +397,8 @@ html[dir="rtl"] .timeline-row{grid-template-columns:12px 1fr auto}
 
 <section id="problem" class="sec"><div class="wrap"><div class="prob-layout">
 <div class="fu"><div class="label label-gold"><span class="label-dot"></span><span data-t="probEyebrow">The Problem</span></div>
-<h2 class="prob-h2" data-t="probTitle">Stop losing leads. <br><span class="accent">Start scaling intelligently.</span></h2>
-<p class="prob-lead" data-t="probBody">Most businesses lose leads to slow follow-ups, missed messages, and disorganized pipelines. Autonique deploys end-to-end AI automation systems that work 24/7 — qualifying every lead, replying instantly, and never letting one slip through.</p></div>
+<h2 class="prob-h2" data-t="probTitle">Your Business Is <span class="accent">Losing Leads</span> Every Day.</h2>
+<p class="prob-lead" data-t="probBody">Slow WhatsApp replies. Missed inquiries. Manual follow-up. Staff overload. Lost bookings. Sound familiar? Autonique deploys end-to-end AI automation systems that work 24/7 — qualifying every lead, replying instantly, and never letting one slip through.</p></div>
 <div class="timeline-card fu fu-d1">
 <div class="timeline-row"><span class="dot dot-r"></span><span data-t="tl1">Lead arrives at 11 PM</span><span class="time" data-t="tl1Time">23:00</span></div>
 <div class="timeline-row active"><span class="dot dot-g"></span><span data-t="tl2">AI qualifies in 12 seconds</span><span class="time" data-t="tl2Time">23:00:12</span></div>
@@ -300,12 +412,70 @@ html[dir="rtl"] .timeline-row{grid-template-columns:12px 1fr auto}
 <h2 class="sec-h2" data-t="servTitle">Premium <span class="accent">AI systems</span> for ambitious teams.</h2>
 <p class="sec-lead" data-t="servSub">Each solution is engineered with production-grade architecture, designed to scale with your business and deliver measurable outcomes.</p></div>
 <div class="sol-grid">
-<div class="sol-card fu"><div class="sol-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2v4m0 12v4M4.93 4.93l2.83 2.83m8.48 8.48l2.83 2.83M2 12h4m12 0h4M4.93 19.07l2.83-2.83m8.48-8.48l2.83-2.83"/><circle cx="12" cy="12" r="4"/></svg></div><h3 class="sol-title" data-t="s1">AI Lead Generation</h3><p class="sol-text" data-t="s1d">Capture, qualify, and prioritize every lead with AI-driven workflows that never sleep. Hot, warm, and cold routing built in.</p></div>
-<div class="sol-card fu fu-d1"><div class="sol-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg></div><h3 class="sol-title" data-t="s2">WhatsApp Automation</h3><p class="sol-text" data-t="s2d">Instant, intelligent replies via WhatsApp. Personalized at scale — across thousands of conversations, in any language.</p></div>
-<div class="sol-card fu fu-d2"><div class="sol-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14c0 1.66 4.03 3 9 3s9-1.34 9-3V5"/><path d="M3 12c0 1.66 4.03 3 9 3s9-1.34 9-3"/></svg></div><h3 class="sol-title" data-t="s3">CRM &amp; Pipeline Systems</h3><p class="sol-text" data-t="s3d">Full sales pipeline visibility with auto-updating dashboards, classification, and SLA tracking. Built for speed and clarity.</p></div>
-<div class="sol-card fu"><div class="sol-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div><h3 class="sol-title" data-t="s4">Custom AI Workflows</h3><p class="sol-text" data-t="s4d">Bespoke automation engineered for your business. From content generation to multi-step decision trees and integrations.</p></div>
-<div class="sol-card fu fu-d1"><div class="sol-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div><h3 class="sol-title" data-t="s5">AI Receptionist for Clinics</h3><p class="sol-text" data-t="s5d">24/7 booking, triage, and patient communication. Multi-lingual, calendar-integrated, and built for healthcare workflows.</p></div>
+<div class="sol-card fu"><div class="sol-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9.75 3.104v5.714a2.25 2.25 0 01-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.301 24.301 0 014.5 0m0 0v5.714c0 .597.237 1.17.659 1.591L19.8 15.3M14.25 3.104c.251.023.501.05.75.082M19.8 15.3l-1.57.393A9.065 9.065 0 0112 15a9.065 9.065 0 00-6.23-.693L5 14.5m14.8.8l1.402 1.402c1 1 .03 2.798-1.414 2.798H4.213c-1.444 0-2.414-1.798-1.414-2.798L4.2 15.3"/></svg></div><h3 class="sol-title" data-t="s1">AI Receptionist</h3><p class="sol-text" data-t="s1d">24/7 intelligent reception that books appointments, answers inquiries, and handles patient communication — in Arabic & English — without missing a single message.</p></div>
+<div class="sol-card fu fu-d1"><div class="sol-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg></div><h3 class="sol-title" data-t="s2">WhatsApp Automation</h3><p class="sol-text" data-t="s2d">Instant, intelligent replies via WhatsApp. Personalized at scale — across thousands of conversations, in any language, round the clock.</p></div>
+<div class="sol-card fu fu-d2"><div class="sol-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2v4m0 12v4M4.93 4.93l2.83 2.83m8.48 8.48l2.83 2.83M2 12h4m12 0h4M4.93 19.07l2.83-2.83m8.48-8.48l2.83-2.83"/><circle cx="12" cy="12" r="4"/></svg></div><h3 class="sol-title" data-t="s3">Lead Generation</h3><p class="sol-text" data-t="s3d">Capture, qualify, and prioritize every lead with AI-driven workflows. Hot, warm, and cold routing built in — no lead falls through the cracks.</p></div>
+<div class="sol-card fu"><div class="sol-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z"/></svg></div><h3 class="sol-title" data-t="s4">Follow-Up Systems</h3><p class="sol-text" data-t="s4d">Automated follow-up sequences that re-engage cold leads, remind about appointments, and nurture prospects until they convert — on autopilot.</p></div>
+<div class="sol-card fu fu-d1"><div class="sol-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14c0 1.66 4.03 3 9 3s9-1.34 9-3V5"/><path d="M3 12c0 1.66 4.03 3 9 3s9-1.34 9-3"/></svg></div><h3 class="sol-title" data-t="s5">CRM Automation</h3><p class="sol-text" data-t="s5d">Full sales pipeline visibility with auto-updating dashboards, classification, and SLA tracking. Your team always knows who to call next.</p></div>
+<div class="sol-card fu fu-d2"><div class="sol-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div><h3 class="sol-title" data-t="s6">Workflow Automation</h3><p class="sol-text" data-t="s6d">Bespoke automation engineered for your business. From content generation to multi-step decision trees, integrations, and custom AI-powered pipelines.</p></div>
 </div></div></section>
+
+<!-- SECTION 4: INDUSTRIES -->
+<section id="industries" class="sec section-light">
+<div class="wrap">
+<div class="sec-header fu">
+  <div class="label label-gold" style="margin:0 auto 24px"><span class="label-dot"></span><span data-t="indEyebrow">Who We Serve</span></div>
+  <h2 class="sec-h2" data-t="indTitle">Built for <span class="accent">Kuwait & GCC</span> Businesses.</h2>
+  <p class="sec-lead" data-t="indSub">Whether you run a clinic, a real estate office, or a logistics fleet — if you're losing leads to slow replies, we have a system for you.</p>
+</div>
+<div class="ind-grid">
+  <div class="ind-card fu"><div class="ind-icon">🏥</div><div class="ind-name" data-t="ind1">Clinics</div><div class="ind-desc" data-t="ind1d">Patient booking, follow-ups & reminders</div></div>
+  <div class="ind-card fu fu-d1"><div class="ind-icon">🏢</div><div class="ind-name" data-t="ind2">Real Estate</div><div class="ind-desc" data-t="ind2d">Lead qualification & property inquiries</div></div>
+  <div class="ind-card fu fu-d2"><div class="ind-icon">🚗</div><div class="ind-name" data-t="ind3">Car Rental</div><div class="ind-desc" data-t="ind3d">Reservations, fleet management & upsells</div></div>
+  <div class="ind-card fu"><div class="ind-icon">🍽️</div><div class="ind-name" data-t="ind4">Restaurants</div><div class="ind-desc" data-t="ind4d">Orders, reservations & loyalty follow-ups</div></div>
+  <div class="ind-card fu fu-d1"><div class="ind-icon">💇</div><div class="ind-name" data-t="ind5">Salons</div><div class="ind-desc" data-t="ind5d">Appointment booking & reminders</div></div>
+  <div class="ind-card fu fu-d2"><div class="ind-icon">🚚</div><div class="ind-name" data-t="ind6">Logistics</div><div class="ind-desc" data-t="ind6d">Shipment tracking & customer updates</div></div>
+  <div class="ind-card fu"><div class="ind-icon">📡</div><div class="ind-name" data-t="ind7">Telecom</div><div class="ind-desc" data-t="ind7d">Support automation & plan upgrades</div></div>
+  <div class="ind-card fu fu-d1"><div class="ind-icon">🛒</div><div class="ind-name" data-t="ind8">E-commerce</div><div class="ind-desc" data-t="ind8d">Order support, returns & abandoned cart</div></div>
+</div>
+</div>
+</section>
+
+<!-- SECTION 5: HOW IT WORKS -->
+<section id="how" class="sec" style="background:var(--ink)">
+<div class="wrap">
+<div class="sec-header fu">
+  <div class="label label-teal" style="margin:0 auto 24px"><span class="label-dot"></span><span data-t="howEyebrow">How It Works</span></div>
+  <h2 class="sec-h2" data-t="howTitle">Live in <span class="accent">3 Steps</span>. No Complexity.</h2>
+  <p class="sec-lead" data-t="howSub">Most clients go live within 48 hours of kickoff. No long contracts, no complicated onboarding.</p>
+</div>
+<div class="steps-grid">
+  <div class="step-card fu">
+    <div class="step-num">01</div>
+    <div class="step-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="28" height="28"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/></svg></div>
+    <h3 class="step-title" data-t="step1Title">Audit</h3>
+    <p class="step-desc" data-t="step1Desc">We analyze your workflow, identify where leads are being lost, and map out exactly what needs to be automated.</p>
+    <div class="step-tag" data-t="step1Tag">Free · 30 minutes</div>
+  </div>
+  <div class="step-arrow">→</div>
+  <div class="step-card fu fu-d1">
+    <div class="step-num">02</div>
+    <div class="step-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="28" height="28"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
+    <h3 class="step-title" data-t="step2Title">Build</h3>
+    <p class="step-desc" data-t="step2Desc">We engineer your custom AI automations — WhatsApp flows, booking systems, lead pipelines — tailored precisely to your business.</p>
+    <div class="step-tag" data-t="step2Tag">48–72 hours</div>
+  </div>
+  <div class="step-arrow">→</div>
+  <div class="step-card fu fu-d2">
+    <div class="step-num">03</div>
+    <div class="step-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="28" height="28"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg></div>
+    <h3 class="step-title" data-t="step3Title">Deploy</h3>
+    <p class="step-desc" data-t="step3Desc">We launch your system, monitor it live, and optimize for performance. You own everything — zero vendor lock-in.</p>
+    <div class="step-tag" data-t="step3Tag">Live & optimized</div>
+  </div>
+</div>
+</div>
+</section>
 
 <section id="why" class="sec section-light"><div class="wrap">
 <div class="sec-header fu"><div class="label label-teal" style="margin:0 auto 24px"><span class="label-dot"></span><span data-t="whyEyebrow">Why Autonique</span></div>
@@ -316,7 +486,150 @@ html[dir="rtl"] .timeline-row{grid-template-columns:12px 1fr auto}
 <div class="why-item fu fu-d1"><div class="why-num" data-t="w2n">02 — Rapid Delivery</div><h3 class="why-title" data-t="w2t">From concept to live system in days</h3><p class="why-desc" data-t="w2d">Our delivery cadence is measured in days, not months. Most clients see their first AI workflow live within a week of kickoff.</p></div>
 <div class="why-item fu fu-d2"><div class="why-num" data-t="w3n">03 — Full Ownership</div><h3 class="why-title" data-t="w3t">You own everything we build</h3><p class="why-desc" data-t="w3d">Code, credentials, accounts, documentation. No vendor lock-in. Complete handover with every project — by design.</p></div>
 </div></div></section>
-  
+
+<!-- <section  class="sec section-dark">
+  <div class="div-ornament fu"><div class="div-line"></div><div class="div-cross"></div><div class="div-line"></div></div>
+      <div style="margin-bottom:24px">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="100 300 830 135" style="height:20px;width:auto;fill:rgba(255,255,255,.3);margin:0 auto"><polygon points="160.22 324.33 115.97 422.36 134.73 422.36 166.94 351.08 199.15 422.36 217.91 422.36 173.66 324.33 160.22 324.33"/><path d="M283.4,375.72c0,18.91-9.38,29.41-26,29.41s-26.05-10.5-26.05-29.41V324.33H213.1v51.39c0,28.71,17.08,46.64,44.25,46.64s44.25-17.93,44.25-46.64V324.33H283.4Z"/><polygon points="310.37 342.54 341.3 342.54 341.3 422.36 359.51 422.36 359.51 342.54 390.44 342.54 390.44 324.33 310.37 324.33 310.37 342.54"/><path d="M445.14,322.93a50.42,50.42,0,1,0,50.41,50.42A50.66,50.66,0,0,0,445.14,322.93Zm0,82.2c-16.67,0-30.39-14.28-30.39-31.78,0-17.65,13.72-31.8,30.39-31.8s30.39,14.15,30.39,31.8C475.53,390.85,461.94,405.13,445.14,405.13Z"/><polygon points="566.35 388.05 517.62 324.33 504.03 324.33 504.03 422.36 522.24 422.36 522.24 359.06 570.97 422.36 584.55 422.36 584.55 324.33 566.35 324.33 566.35 388.05"/><rect x="596.79" y="324.33" width="18.21" height="98.03"/><path d="M805,375.72c0,18.91-9.38,29.41-26,29.41s-26.05-10.5-26.05-29.41V324.33h-18.2v51.39c0,28.71,17.08,46.64,44.25,46.64s44.25-17.93,44.25-46.64V324.33H805Z"/><polygon points="903.89 342.54 903.89 324.33 832.89 324.33 832.89 422.36 903.89 422.36 903.89 404.15 851.1 404.15 851.1 382.45 895.91 382.45 895.91 364.24 851.1 364.24 851.1 342.54 903.89 342.54"/><path d="M707.1,413.31l9.43,13.19H694.41l-15.27-21.31a31.7,31.7,0,0,0,27.19-21.07,26.24,26.24,0,0,0,1-3.4c.14-.59.27-1.18.36-1.77a13.47,13.47,0,0,0,.32-2.4,20.42,20.42,0,0,0,.18-2.95v-.18a23.68,23.68,0,0,0-.18-3.17,26.22,26.22,0,0,0-.45-3.13v0a24.77,24.77,0,0,0-.77-3,.16.16,0,0,1,0-.14,16.41,16.41,0,0,0-1-2.81,25.16,25.16,0,0,0-3-5.44,15,15,0,0,0-1.81-2.44,31.4,31.4,0,0,0-20-11.34V323.21a50.34,50.34,0,0,1,26.15,90.1Z"/><path d="M644.61,373.4A31.78,31.78,0,0,1,671.86,342V323.19A50.4,50.4,0,1,0,682.48,423.4l-13.82-19.22A31.76,31.76,0,0,1,644.61,373.4Z"/></svg>
+  </div>
+</section> -->
+
+
+<!-- SECTION 6: DEMO / SCREENSHOTS -->
+<section id="demo" class="sec" style="background:var(--ink)">
+<div class="wrap">
+<div class="sec-header fu">
+  <div class="label label-teal" style="margin:0 auto 24px"><span class="label-dot"></span><span data-t="demoEyebrow">See It In Action</span></div>
+  <h2 class="sec-h2" data-t="demoTitle">What <span class="accent">AUTONIQUE</span> looks like running live.</h2>
+  <p class="sec-lead" data-t="demoSub">Real AI. Real conversations. Real results. Here's what your customers and your team will see every day.</p>
+</div>
+
+<!-- WhatsApp AI Chat Mockup -->
+<div class="demo-showcase fu">
+  <div class="demo-tab-bar">
+    <button class="demo-tab active" onclick="showDemo('wa')">💬 WhatsApp AI Chat</button>
+    <button class="demo-tab" onclick="showDemo('dashboard')">📊 Lead Dashboard</button>
+    <button class="demo-tab" onclick="showDemo('booking')">📅 Booking Flow</button>
+    <button class="demo-tab" onclick="showDemo('workflow')">⚙️ Automation</button>
+  </div>
+
+  <!-- WhatsApp Panel -->
+  <div class="demo-panel active" id="demo-wa">
+    <div class="demo-phone-wrap">
+      <div class="demo-phone">
+        <div class="demo-phone-header">
+          <div class="demo-phone-av">🏥</div>
+          <div>
+            <div class="demo-phone-name">Autonique Clinic AI</div>
+            <div class="demo-phone-status">● Online · Replies instantly</div>
+          </div>
+        </div>
+        <div class="demo-phone-msgs">
+          <div class="demo-msg-in"><div class="demo-bubble-in">Hello, I'd like to book an appointment for tomorrow at 5 PM 🙏</div><div class="demo-time">11:02 PM</div></div>
+          <div class="demo-msg-out"><div class="demo-bubble-out">Hello! Thank you for reaching out to us 😊<br><br>I can book you for <strong>tomorrow at 5:00 PM</strong>. May I have your name please?</div><div class="demo-time">11:02 PM · ✓✓</div></div>
+          <div class="demo-msg-in"><div class="demo-bubble-in">Ahmed Al-Rashid</div><div class="demo-time">11:03 PM</div></div>
+          <div class="demo-msg-out"><div class="demo-bubble-out">Perfect, Ahmed! ✅<br><br>Your appointment is confirmed:<br>📅 Tomorrow, 5:00 PM<br>📍 Our main clinic<br><br>You'll receive a reminder 1 hour before. See you then!</div><div class="demo-time">11:03 PM · ✓✓</div></div>
+          <div class="demo-typing-indicator"><span></span><span></span><span></span></div>
+        </div>
+        <div class="demo-phone-input">
+          <span class="demo-input-placeholder">Type a message</span>
+          <div class="demo-send-btn">➤</div>
+        </div>
+      </div>
+      <div class="demo-side-info">
+        <div class="demo-info-card">
+          <div class="demo-info-label">Response Time</div>
+          <div class="demo-info-value" style="color:var(--gold)">12 sec</div>
+        </div>
+        <div class="demo-info-card">
+          <div class="demo-info-label">Intent Detected</div>
+          <div class="demo-info-value" style="color:#10b981">BOOKING</div>
+        </div>
+        <div class="demo-info-card">
+          <div class="demo-info-label">CRM Updated</div>
+          <div class="demo-info-value" style="color:var(--teal)">Automatic</div>
+        </div>
+        <div class="demo-info-card">
+          <div class="demo-info-label">Language</div>
+          <div class="demo-info-value" style="color:var(--gold)">EN / AR</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Dashboard Panel -->
+  <div class="demo-panel" id="demo-dashboard">
+    <div class="demo-dashboard">
+      <div class="demo-db-header">
+        <span class="demo-db-title">Lead Pipeline Dashboard</span>
+        <span class="demo-db-live">● Live</span>
+      </div>
+      <div class="demo-db-stats">
+        <div class="demo-db-stat"><div class="demo-db-num" style="color:var(--gold)">847</div><div class="demo-db-lbl">Total Leads</div></div>
+        <div class="demo-db-stat"><div class="demo-db-num" style="color:#10b981">312</div><div class="demo-db-lbl">Converted</div></div>
+        <div class="demo-db-stat"><div class="demo-db-num" style="color:var(--teal)">193</div><div class="demo-db-lbl">Active</div></div>
+        <div class="demo-db-stat"><div class="demo-db-num" style="color:#ef4444">42</div><div class="demo-db-lbl">Missed → Recovered</div></div>
+      </div>
+      <div class="demo-db-rows">
+        <div class="demo-db-row"><div class="demo-db-dot" style="background:#10b981"></div><div class="demo-db-lname">Fatima Al-Sabah</div><div class="demo-intent-badge" style="background:rgba(16,185,129,.15);color:#10b981">BOOKED</div><div class="demo-db-time">2 min ago</div></div>
+        <div class="demo-db-row"><div class="demo-db-dot" style="background:var(--gold)"></div><div class="demo-db-lname">Mohammed Al-Osaimi</div><div class="demo-intent-badge" style="background:var(--gold-a);color:var(--gold)">HOT LEAD</div><div class="demo-db-time">5 min ago</div></div>
+        <div class="demo-db-row"><div class="demo-db-dot" style="background:var(--teal)"></div><div class="demo-db-lname">Sara Al-Mutairi</div><div class="demo-intent-badge" style="background:var(--teal-a);color:var(--teal)">INQUIRY</div><div class="demo-db-time">11 min ago</div></div>
+        <div class="demo-db-row"><div class="demo-db-dot" style="background:#10b981"></div><div class="demo-db-lname">Khalid Al-Rashidi</div><div class="demo-intent-badge" style="background:rgba(16,185,129,.15);color:#10b981">BOOKED</div><div class="demo-db-time">18 min ago</div></div>
+        <div class="demo-db-row"><div class="demo-db-dot" style="background:#ef4444"></div><div class="demo-db-lname">Noor Al-Kandari</div><div class="demo-intent-badge" style="background:rgba(239,68,68,.15);color:#ef4444">RESCHEDULE</div><div class="demo-db-time">32 min ago</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Booking Flow Panel -->
+  <div class="demo-panel" id="demo-booking">
+    <div class="demo-flow">
+      <div class="demo-flow-title">AI Booking Flow — Runs 24/7</div>
+      <div class="demo-flow-steps">
+        <div class="demo-flow-step active"><div class="demo-flow-num">1</div><div class="demo-flow-txt"><strong>Customer messages</strong><br>via WhatsApp or website</div></div>
+        <div class="demo-flow-arrow">→</div>
+        <div class="demo-flow-step active"><div class="demo-flow-num">2</div><div class="demo-flow-txt"><strong>AI detects intent</strong><br>Booking / Inquiry / Cancel</div></div>
+        <div class="demo-flow-arrow">→</div>
+        <div class="demo-flow-step active"><div class="demo-flow-num">3</div><div class="demo-flow-txt"><strong>Checks calendar</strong><br>Real-time availability</div></div>
+        <div class="demo-flow-arrow">→</div>
+        <div class="demo-flow-step active"><div class="demo-flow-num">4</div><div class="demo-flow-txt"><strong>Confirms booking</strong><br>Instant reply in any language</div></div>
+        <div class="demo-flow-arrow">→</div>
+        <div class="demo-flow-step active"><div class="demo-flow-num">5</div><div class="demo-flow-txt"><strong>CRM updated</strong><br>Team notified automatically</div></div>
+      </div>
+      <div class="demo-flow-note">⚡ This entire flow takes under 15 seconds. Zero human intervention required.</div>
+    </div>
+  </div>
+
+  <!-- Workflow Panel -->
+  <div class="demo-panel" id="demo-workflow">
+    <div class="demo-workflow">
+      <div class="demo-wf-title">Automation Workflow Builder</div>
+      <div class="demo-wf-nodes">
+        <div class="demo-wf-node trigger"><div class="demo-wf-node-icon">📩</div><div class="demo-wf-node-label">Trigger<br><small>New WhatsApp message</small></div></div>
+        <div class="demo-wf-line"></div>
+        <div class="demo-wf-node ai"><div class="demo-wf-node-icon">🤖</div><div class="demo-wf-node-label">AI Analysis<br><small>Detect intent & extract data</small></div></div>
+        <div class="demo-wf-line"></div>
+        <div class="demo-wf-node condition"><div class="demo-wf-node-icon">⚡</div><div class="demo-wf-node-label">Route<br><small>Booking / Follow-up / Escalate</small></div></div>
+        <div class="demo-wf-line"></div>
+        <div class="demo-wf-node action"><div class="demo-wf-node-icon">✅</div><div class="demo-wf-node-label">Action<br><small>Reply + Update CRM + Alert team</small></div></div>
+      </div>
+      <div class="demo-wf-footer">
+        <span class="demo-wf-badge">n8n</span>
+        <span class="demo-wf-badge">Make.com</span>
+        <span class="demo-wf-badge">WhatsApp API</span>
+        <span class="demo-wf-badge">Google Calendar</span>
+        <span class="demo-wf-badge">Slack / Email</span>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div style="text-align:center;margin-top:40px">
+<a href="https://wa.me/96599893300" target="_blank" rel="noopener" class="btn btn-wa btn-lg"><svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18" style="flex-shrink:0"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/></svg><span data-t="demoCta">Book a Live Demo — See It Running</span></a>
+</div>
+</div>
+</section>
+
 <section id="cta-banner" class="sec section-light"><div class="wrap"><div class="cta-inner fu">
 <h2 class="cta-h2" data-t="ctaTitle">Ready to <span class="accent">Automate</span> what matters?</h2>
 <p class="cta-p" data-t="ctaBody">Tell us about your operation. We'll respond within hours with a tailored automation roadmap.</p>
@@ -618,20 +931,27 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
+function showDemo(tab) {
+  document.querySelectorAll('.demo-panel').forEach(function(p){ p.classList.remove('active'); });
+  document.querySelectorAll('.demo-tab').forEach(function(t){ t.classList.remove('active'); });
+  document.getElementById('demo-'+tab).classList.add('active');
+  event.target.classList.add('active');
+}
+
 // ===== FULL PAGE LANGUAGE TOGGLE =====
 let pageLang = 'EN';
 
 const pageContent = {
   EN: {
     // Nav
-    navServices: 'Services', navWhy: 'Why Us', navDemo: 'Try Demo',
+    navServices: 'Services', navIndustries: 'Industries', navHow: 'How It Works', navDemo: 'Try Demo',
     navContact: 'Contact', navCta: 'Book Free Demo', langBtn: 'عربي',
     // Hero
     eyebrow: 'AI Automation · Engineered in Kuwait',
-    h1: 'AI Automation, <span class="accent">Engineered</span> for Growth.',
-    sub: 'We build intelligent systems that capture, qualify, and convert leads — so your team can focus on closing.',
-    urgency: '⚡ Clinics are losing patients daily due to slow replies — we fix that in 48 hours.',
-    heroCta1: 'Book Free Demo',
+    h1: 'Helping Kuwait & GCC Businesses <span class="accent">Grow</span> With AI Automation.',
+    sub: 'AI systems for WhatsApp, lead generation, appointment booking, follow-ups, and workflow automation.',
+    urgency: '⚡ Your business is losing leads every day — slow replies, missed bookings, manual follow-up. We fix that in 48 hours.',
+    heroCta1: 'Automate My Business', heroCta2: 'WhatsApp Us',
     // Trust strip
     t1n: '<30s', t1l: 'WhatsApp response to every lead',
     t2n: '70%', t2l: 'Missed leads recovered',
@@ -644,17 +964,37 @@ const pageContent = {
     tl5: 'Lead converted', tl5Time: '+ 15 seconds',
     // Problem
     probEyebrow: 'The Problem',
-    probTitle: 'Stop losing leads. <br><span class="accent">Start scaling intelligently.</span>',
-    probBody: 'Most businesses lose leads to slow follow-ups, missed messages, and disorganized pipelines. Autonique deploys end-to-end AI automation systems that work 24/7 — qualifying every lead, replying instantly, and never letting one slip through.',
+    probTitle: 'Your Business Is <span class="accent">Losing Leads</span> Every Day.',
+    probBody: 'Slow WhatsApp replies. Missed inquiries. Manual follow-up. Staff overload. Lost bookings. Sound familiar? Autonique deploys end-to-end AI automation that works 24/7 — qualifying every lead, replying instantly, and never letting one slip through.',
     // Services
     servEyebrow: 'What We Build',
     servTitle: 'Premium <span class="accent">AI systems</span> for ambitious teams.',
     servSub: 'Each solution is engineered with production-grade architecture, designed to scale with your business and deliver measurable outcomes.',
-    s1: 'AI Lead Generation', s1d: 'Capture, qualify, and prioritize every lead with AI-driven workflows that never sleep. Hot, warm, and cold routing built in.',
-    s2: 'WhatsApp Automation', s2d: 'Instant, intelligent replies via WhatsApp. Personalized at scale — across thousands of conversations, in any language.',
-    s3: 'CRM & Pipeline Systems', s3d: 'Full sales pipeline visibility with auto-updating dashboards, classification, and SLA tracking. Built for speed and clarity.',
-    s4: 'Custom AI Workflows', s4d: 'Bespoke automation engineered for your business. From content generation to multi-step decision trees and integrations.',
-    s5: 'AI Receptionist for Clinics', s5d: '24/7 booking, triage, and patient communication. Multi-lingual, calendar-integrated, and built for healthcare workflows.',
+    s1: 'AI Receptionist', s1d: '24/7 intelligent reception that books appointments, answers inquiries, and handles patient communication — in Arabic & English — without missing a single message.',
+    s2: 'WhatsApp Automation', s2d: 'Instant, intelligent replies via WhatsApp. Personalized at scale — across thousands of conversations, in any language, round the clock.',
+    s3: 'Lead Generation', s3d: 'Capture, qualify, and prioritize every lead with AI-driven workflows. Hot, warm, and cold routing built in — no lead falls through the cracks.',
+    s4: 'Follow-Up Systems', s4d: 'Automated follow-up sequences that re-engage cold leads, remind about appointments, and nurture prospects until they convert — on autopilot.',
+    s5: 'CRM Automation', s5d: 'Full sales pipeline visibility with auto-updating dashboards, classification, and SLA tracking. Your team always knows who to call next.',
+    s6: 'Workflow Automation', s6d: 'Bespoke automation engineered for your business. From content generation to multi-step decision trees, integrations, and custom AI-powered pipelines.',
+    // Industries
+    indEyebrow: 'Who We Serve',
+    indTitle: 'Built for <span class="accent">Kuwait & GCC</span> Businesses.',
+    indSub: "Whether you run a clinic, a real estate office, or a logistics fleet — if you're losing leads to slow replies, we have a system for you.",
+    ind1: 'Clinics', ind1d: 'Patient booking, follow-ups & reminders',
+    ind2: 'Real Estate', ind2d: 'Lead qualification & property inquiries',
+    ind3: 'Car Rental', ind3d: 'Reservations, fleet management & upsells',
+    ind4: 'Restaurants', ind4d: 'Orders, reservations & loyalty follow-ups',
+    ind5: 'Salons', ind5d: 'Appointment booking & reminders',
+    ind6: 'Logistics', ind6d: 'Shipment tracking & customer updates',
+    ind7: 'Telecom', ind7d: 'Support automation & plan upgrades',
+    ind8: 'E-commerce', ind8d: 'Order support, returns & abandoned cart',
+    // How It Works
+    howEyebrow: 'How It Works',
+    howTitle: 'Live in <span class="accent">3 Steps</span>. No Complexity.',
+    howSub: 'Most clients go live within 48 hours of kickoff. No long contracts, no complicated onboarding.',
+    step1Title: 'Audit', step1Desc: 'We analyze your workflow, identify where leads are being lost, and map out exactly what needs to be automated.', step1Tag: 'Free · 30 minutes',
+    step2Title: 'Build', step2Desc: 'We engineer your custom AI automations — WhatsApp flows, booking systems, lead pipelines — tailored precisely to your business.', step2Tag: '48–72 hours',
+    step3Title: 'Deploy', step3Desc: 'We launch your system, monitor it live, and optimize for performance. You own everything — zero vendor lock-in.', step3Tag: 'Live & optimized',
     // Why
     whyEyebrow: 'Why Autonique',
     whyTitle: 'Engineered for <span class="accent">precision</span>. Designed for scale.',
@@ -663,9 +1003,10 @@ const pageContent = {
     w2n: '02 — Rapid Delivery', w2t: 'From concept to live system in days', w2d: 'Our delivery cadence is measured in days, not months. Most clients see their first AI workflow live within a week of kickoff.',
     w3n: '03 — Full Ownership', w3t: 'You own everything we build', w3d: 'Code, credentials, accounts, documentation. No vendor lock-in. Complete handover with every project — by design.',
     // Demo
-    demoEyebrow: 'Live AI Demo',
-    demoTitle: 'Experience the <span class="accent">AI Receptionist</span> live.',
-    demoSub: 'Type a message as a patient would — book, cancel, or reschedule an appointment. Watch the AI handle it instantly in Arabic or English.',
+    demoEyebrow: 'See It In Action',
+    demoTitle: 'What <span class="accent">AUTONIQUE</span> looks like running live.',
+    demoSub: 'Real AI. Real conversations. Real results. Here\'s what your customers and your team will see every day.',
+    demoCta: 'Book a Live Demo — See It Running',
     // CTA Banner
     ctaTitle: 'Ready to <span class="accent">automate</span> what matters?',
     ctaBody: "Tell us about your operation. We'll respond within hours with a tailored automation roadmap.",
@@ -694,13 +1035,13 @@ const pageContent = {
     dir: 'ltr'
   },
   AR: {
-    navServices: 'الخدمات', navWhy: 'لماذا نحن', navDemo: 'جرب الديمو',
+    navServices: 'الخدمات', navIndustries: 'القطاعات', navHow: 'كيف يعمل',
     navContact: 'تواصل', navCta: 'احجز عرضاً مجانياً', langBtn: 'English',
     eyebrow: 'أتمتة الذكاء الاصطناعي · مصممة في الكويت',
-    h1: 'أتمتة الذكاء الاصطناعي، <span class="accent">مُهندسة</span> للنمو.',
-    sub: 'نبني أنظمة ذكية تلتقط العملاء المحتملين وتؤهلهم وتحوّلهم — حتى يتمكن فريقك من التركيز على إتمام الصفقات.',
-    urgency: '⚡ العيادات تفقد مرضاها يومياً بسبب بطء الردود — نحل ذلك في 48 ساعة.',
-    heroCta1: 'احجز عرضاً مجانياً',
+    h1: 'نساعد شركات الكويت ودول الخليج على <span class="accent">النمو</span> بالذكاء الاصطناعي.',
+    sub: 'أنظمة ذكاء اصطناعي للواتساب، توليد العملاء، حجز المواعيد، المتابعة، وأتمتة سير العمل.',
+    urgency: '⚡ عملك يخسر عملاء كل يوم — بطء الردود، حجوزات فائتة، متابعة يدوية. نحل ذلك في 48 ساعة.',
+    heroCta1: 'أتمتة عملي', heroCta2: 'تواصل عبر واتساب',
     t1n: '30 ث', t1l: 'رد واتساب لكل عميل محتمل',
     t2n: '70%', t2l: 'استعادة العملاء المفقودين',
     t3n: '48 س', t3l: 'من التسجيل إلى النظام المباشر',
@@ -711,25 +1052,46 @@ const pageContent = {
     tl4: 'تم تنبيه فريق المبيعات', tl4Time: '23:00:15',
     tl5: 'تم تحويل العميل المحتمل', tl5Time: '+ 15 ثانية',
     probEyebrow: 'المشكلة',
-    probTitle: 'توقف عن خسارة العملاء. <br><span class="accent">ابدأ التوسع بذكاء.</span>',
-    probBody: 'معظم الشركات تخسر عملاءها بسبب بطء المتابعة والرسائل الفائتة والمسارات غير المنظمة. تنشر أوتونيك أنظمة أتمتة ذكاء اصطناعي متكاملة تعمل على مدار الساعة — تؤهّل كل عميل محتمل، وترد فوراً، ولا تترك أي فرصة تفوتك.',
+    probTitle: 'عملك <span class="accent">يخسر عملاء</span> كل يوم.',
+    probBody: 'بطء ردود واتساب. استفسارات فائتة. متابعة يدوية. ضغط على الموظفين. حجوزات ضائعة. هل هذا مألوف؟ أوتونيك تنشر أنظمة أتمتة متكاملة تعمل 24/7 — تؤهّل كل عميل، وترد فوراً، ولا تترك أي فرصة تفوتك.',
     servEyebrow: 'ما نبنيه',
     servTitle: 'أنظمة <span class="accent">ذكاء اصطناعي</span> متميزة للفرق الطموحة.',
     servSub: 'كل حل مهندس بمعمارية احترافية، مصمم للتوسع مع عملك وتحقيق نتائج قابلة للقياس.',
-    s1: 'توليد العملاء المحتملين بالذكاء الاصطناعي', s1d: 'التقاط وتأهيل وترتيب أولويات كل عميل محتمل عبر سير عمل مدفوع بالذكاء الاصطناعي لا يتوقف. تصنيف تلقائي للعملاء الساخنين والدافئين والباردين.',
+    s1: 'موظف الاستقبال الذكي', s1d: 'استقبال ذكي على مدار الساعة يحجز المواعيد ويرد على الاستفسارات بالعربية والإنجليزية — دون تفويت أي رسالة.',
     s2: 'أتمتة واتساب', s2d: 'ردود فورية وذكية عبر واتساب، مخصصة على نطاق واسع — عبر آلاف المحادثات وبأي لغة.',
-    s3: 'أنظمة إدارة العملاء ومسار المبيعات', s3d: 'رؤية شاملة لمسار المبيعات مع لوحات تحديث تلقائي وتصنيف ذكي وتتبع مستويات الخدمة.',
-    s4: 'سير عمل ذكاء اصطناعي مخصص', s4d: 'أتمتة مصممة خصيصاً لعملك — من إنتاج المحتوى إلى شجرات قرار متعددة الخطوات والتكاملات المعقدة.',
-    s5: 'موظف استقبال ذكي للعيادات', s5d: 'حجز وتصنيف وتواصل مع المرضى على مدار الساعة، بدعم متعدد اللغات ومتكامل مع التقويم.',
+    s3: 'توليد العملاء المحتملين', s3d: 'التقاط وتأهيل وترتيب أولويات كل عميل محتمل — لا يفوت أحد أبداً.',
+    s4: 'أنظمة المتابعة', s4d: 'تسلسلات متابعة تلقائية تُعيد إشراك العملاء الباردين وتُذكّر بالمواعيد وتُحوّل الاهتمام إلى قرار شراء.',
+    s5: 'أتمتة إدارة العملاء', s5d: 'رؤية شاملة لمسار المبيعات مع لوحات تحديث تلقائي وتتبع مستويات الخدمة.',
+    s6: 'أتمتة سير العمل', s6d: 'أتمتة مصممة خصيصاً لعملك — من إنتاج المحتوى إلى شجرات قرار متعددة الخطوات.',
+    // Industries
+    indEyebrow: 'من نخدم',
+    indTitle: 'مصمم لشركات <span class="accent">الكويت والخليج</span>.',
+    indSub: 'سواء كنت تدير عيادة أو مكتب عقارات أو أسطول لوجستي — إذا كنت تخسر عملاء بسبب بطء الردود، فلدينا النظام المناسب.',
+    ind1: 'العيادات', ind1d: 'حجز المرضى والمتابعة والتذكيرات',
+    ind2: 'العقارات', ind2d: 'تأهيل العملاء واستفسارات العقارات',
+    ind3: 'تأجير السيارات', ind3d: 'الحجوزات وإدارة الأسطول والمبيعات الإضافية',
+    ind4: 'المطاعم', ind4d: 'الطلبات والحجوزات ومتابعة الولاء',
+    ind5: 'الصالونات', ind5d: 'حجز المواعيد والتذكيرات',
+    ind6: 'اللوجستيات', ind6d: 'تتبع الشحنات وتحديثات العملاء',
+    ind7: 'الاتصالات', ind7d: 'أتمتة الدعم وترقيات الخطط',
+    ind8: 'التجارة الإلكترونية', ind8d: 'دعم الطلبات والمرتجعات والسلة المتروكة',
+    // How It Works
+    howEyebrow: 'كيف يعمل',
+    howTitle: 'مباشر في <span class="accent">3 خطوات</span>. بلا تعقيد.',
+    howSub: 'معظم العملاء يبدأون العمل خلال 48 ساعة من الإطلاق. لا عقود طويلة، لا إعداد معقد.',
+    step1Title: 'تدقيق', step1Desc: 'نحلل سير عملك الحالي، ونحدد أين تُفقد العملاء، ونضع خطة أتمتة دقيقة.', step1Tag: 'مجاني · 30 دقيقة',
+    step2Title: 'بناء', step2Desc: 'نهندس أتمتة ذكاء اصطناعي مخصصة — واتساب، حجوزات، مسارات عملاء — مصممة لعملك تحديداً.', step2Tag: '48–72 ساعة',
+    step3Title: 'إطلاق', step3Desc: 'نطلق نظامك ونراقبه مباشرة ونحسّنه باستمرار. تملك كل شيء — بدون قيود.', step3Tag: 'مباشر ومحسّن',
     whyEyebrow: 'لماذا أوتونيك',
     whyTitle: 'مُهندسة <span class="accent">بدقة</span>. مصممة للتوسع.',
     whySub: 'لا نقدم قوالب جاهزة. كل نظام نبنيه مخصص ومختبر في بيئة الإنتاج ومتوافق مع أهداف عملك.',
     w1n: '01 — هندسة متميزة', w1t: 'بنية تحتية على مستوى الإنتاج', w1d: 'كود نظيف، معالجة أخطاء، ومراقبة مستمرة. كل سير عمل مبني بدقة مؤسسية — لا مجرد عرض تجريبي.',
     w2n: '02 — تسليم سريع', w2t: 'من الفكرة إلى النظام الحي في أيام', w2d: 'نقيس وتيرة تسليمنا بالأيام لا الأشهر. معظم عملائنا يرون أول سير عمل ذكي يعمل خلال أسبوع من انطلاق المشروع.',
     w3n: '03 — ملكية كاملة', w3t: 'كل ما نبنيه يعود لك', w3d: 'الكود والبيانات والحسابات والتوثيق — كل شيء. لا قيود ولا ارتباط بمزود واحد. تسليم كامل مع كل مشروع، بحكم التصميم.',
-    demoEyebrow: 'عرض مباشر',
-    demoTitle: 'جرب <span class="accent">موظف الاستقبال الذكي</span> الآن.',
-    demoSub: 'اكتب رسالة كما يفعل المريض — احجز أو ألغِ أو عدّل موعداً. شاهد الذكاء الاصطناعي يتعامل معه فوراً.',
+    demoEyebrow: 'شاهده في العمل',
+    demoTitle: 'هذا ما يبدو عليه <span class="accent">أوتونيك</span> وهو يعمل فعلياً.',
+    demoSub: 'ذكاء اصطناعي حقيقي. محادثات حقيقية. نتائج حقيقية. هذا ما سيراه عملاؤك وفريقك كل يوم.',
+    demoCta: 'احجز عرضاً مباشراً — شاهده يعمل',
     ctaTitle: 'هل أنت مستعد <span class="accent">لأتمتة</span> ما يهم؟',
     ctaBody: 'أخبرنا عن عملك. سنرد في غضون ساعات بخارطة طريق أتمتة مخصصة.',
     ctaBtn1: 'احجز عرضاً مجانياً', ctaBtn2: 'تواصل معنا',
@@ -776,7 +1138,8 @@ function applyPageLanguage(lang) {
 
   // Nav
   safeText('[data-t="navServices"]', c.navServices);
-  safeText('[data-t="navWhy"]', c.navWhy);
+  safeText('[data-t="navIndustries"]', c.navIndustries);
+  safeText('[data-t="navHow"]', c.navHow);
   safeText('[data-t="navDemo"]', c.navDemo);
   safeText('[data-t="navContact"]', c.navContact);
   safeText('[data-t="navCta"]', c.navCta);
@@ -786,6 +1149,7 @@ function applyPageLanguage(lang) {
   safeText('[data-t="sub"]', c.sub);
   safeText('[data-t="urgency"]', c.urgency);
   safeText('[data-t="heroCta1"]', c.heroCta1);
+  safeText('[data-t="heroCta2"]', c.heroCta2);
 
   // Trust
   safeText('[data-t="t1n"]', c.t1n); safeText('[data-t="t1l"]', c.t1l);
@@ -812,6 +1176,21 @@ function applyPageLanguage(lang) {
   safeText('[data-t="s3"]', c.s3); safeText('[data-t="s3d"]', c.s3d);
   safeText('[data-t="s4"]', c.s4); safeText('[data-t="s4d"]', c.s4d);
   safeText('[data-t="s5"]', c.s5); safeText('[data-t="s5d"]', c.s5d);
+  safeText('[data-t="s6"]', c.s6); safeText('[data-t="s6d"]', c.s6d);
+
+  // Industries
+  safeText('[data-t="indEyebrow"]', c.indEyebrow);
+  safeHTML('[data-t="indTitle"]', c.indTitle);
+  safeText('[data-t="indSub"]', c.indSub);
+  ['ind1','ind1d','ind2','ind2d','ind3','ind3d','ind4','ind4d','ind5','ind5d','ind6','ind6d','ind7','ind7d','ind8','ind8d'].forEach(function(k){ safeText('[data-t="'+k+'"]', c[k]); });
+
+  // How It Works
+  safeText('[data-t="howEyebrow"]', c.howEyebrow);
+  safeHTML('[data-t="howTitle"]', c.howTitle);
+  safeText('[data-t="howSub"]', c.howSub);
+  safeText('[data-t="step1Title"]', c.step1Title); safeText('[data-t="step1Desc"]', c.step1Desc); safeText('[data-t="step1Tag"]', c.step1Tag);
+  safeText('[data-t="step2Title"]', c.step2Title); safeText('[data-t="step2Desc"]', c.step2Desc); safeText('[data-t="step2Tag"]', c.step2Tag);
+  safeText('[data-t="step3Title"]', c.step3Title); safeText('[data-t="step3Desc"]', c.step3Desc); safeText('[data-t="step3Tag"]', c.step3Tag);
 
   // Why
   safeText('[data-t="whyEyebrow"]', c.whyEyebrow);
@@ -825,6 +1204,7 @@ function applyPageLanguage(lang) {
   safeText('[data-t="demoEyebrow"]', c.demoEyebrow);
   safeHTML('[data-t="demoTitle"]', c.demoTitle);
   safeText('[data-t="demoSub"]', c.demoSub);
+  safeText('[data-t="demoCta"]', c.demoCta);
 
   // CTA Banner
   safeHTML('[data-t="ctaTitle"]', c.ctaTitle);
